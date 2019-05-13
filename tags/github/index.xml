@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Clein&#39;s Repository</title>
-    <link>http://clein8.github.io/</link>
-    <description>Recent content on Clein&#39;s Repository</description>
+    <title>Github on Clein&#39;s Repository</title>
+    <link>http://clein8.github.io/tags/github/</link>
+    <description>Recent content in Github on Clein&#39;s Repository</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Thu, 28 Mar 2019 20:04:28 +0900</lastBuildDate>
     
-	<atom:link href="http://clein8.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://clein8.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

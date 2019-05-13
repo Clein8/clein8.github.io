@@ -3,17 +3,84 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://clein8.github.io/post/setup_hugo/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://clein8.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://clein8.github.io/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/tags/code-highlighter/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/tags/github/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/categories/github/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/tags/hexo/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/tags/hugo/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/categories/hugo/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/tags/jekyll/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/post/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://clein8.github.io/tags/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/tags/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%83%9D%EC%84%B1%EA%B8%B0/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/tags/%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8/</loc>
+    <lastmod>2019-03-28T20:04:28+09:00</lastmod>
     <priority>0</priority>
   </url>
   
