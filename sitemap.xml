@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://clein8.github.io/post/wordpress-custom-post-type/</loc>
+    <lastmod>2019-05-28T16:21:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://clein8.github.io/post/setup-hugo/</loc>
     <lastmod>2019-05-13T13:14:00+09:00</lastmod>
   </url>
@@ -26,7 +31,7 @@
   
   <url>
     <loc>http://clein8.github.io/</loc>
-    <lastmod>2019-05-13T13:14:00+09:00</lastmod>
+    <lastmod>2019-05-28T16:21:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -43,13 +48,13 @@
   </url>
   
   <url>
-    <loc>http://clein8.github.io/tags/github/</loc>
+    <loc>http://clein8.github.io/categories/github/</loc>
     <lastmod>2019-05-13T13:14:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://clein8.github.io/categories/github/</loc>
+    <loc>http://clein8.github.io/tags/github/</loc>
     <lastmod>2019-05-13T13:14:00+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -61,13 +66,13 @@
   </url>
   
   <url>
-    <loc>http://clein8.github.io/tags/hugo/</loc>
+    <loc>http://clein8.github.io/categories/hugo/</loc>
     <lastmod>2019-05-13T13:14:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://clein8.github.io/categories/hugo/</loc>
+    <loc>http://clein8.github.io/tags/hugo/</loc>
     <lastmod>2019-05-13T13:14:00+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -91,8 +96,20 @@
   </url>
   
   <url>
+    <loc>http://clein8.github.io/categories/plugin/</loc>
+    <lastmod>2019-05-28T16:21:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/tags/plugin/</loc>
+    <lastmod>2019-05-28T16:21:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://clein8.github.io/post/</loc>
-    <lastmod>2019-05-13T13:14:00+09:00</lastmod>
+    <lastmod>2019-05-28T16:21:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -105,6 +122,18 @@
   <url>
     <loc>http://clein8.github.io/tags/vuepress/</loc>
     <lastmod>2019-05-13T11:07:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/categories/wordpress/</loc>
+    <lastmod>2019-05-28T16:21:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/tags/wordpress/</loc>
+    <lastmod>2019-05-28T16:21:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
