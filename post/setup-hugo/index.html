@@ -199,7 +199,9 @@ $ hugo -t {theme_name}</code></pre></div>
 
 <hr />
 
-<p><code>Hugo</code> 전체를 Git에 올릴려면은 2개의 저장소가 필요하다. 하나는 Hugo file용 다른 하나는 Build된 <code>public</code> 폴더 안에 파일 용이다. <code>****.github.io</code>에는 Build된 <code>public</code> 폴더 안에 든 파일을 올려야 한다. <s>처음에는 <code>public</code> 폴더 용만 올릴려고 생각 했었는데, 다른 컴퓨터에서 글을 쓰거나 나중에 컴퓨터를 바꿀 일을 대비해서. 그냥 둘 다 올려 두기로 했다.</s></p>
+<p><code>Hugo</code> 전체를 Git에 올릴려면은 2개의 저장소가 필요하다. 하나는 Hugo file용 다른 하나는 Build된 <code>public</code> 폴더 안에 파일 용이다. <code>****.github.io</code>에는 Build된 <code>public</code> 폴더 안에 든 파일을 올려야 한다. <s>처음에는 <code>public</code> 폴더 용만 올릴려고 생각 했었는데, 다른 컴퓨터에서 글을 쓰거나 나중에 컴퓨터를 바꿀 일을 대비해서. 그냥 둘 다 올려 두기로 했다.</s> 지금은 다시 맥북으로만 블로깅을 한다고 치고 public폴더 하나만 연결해 뒀다.</p>
+
+<h3 id="4-1-둘-다-연결">4-1. 둘 다 연결</h3>
 
 <p>일단 <code>{site_name}</code> 폴더 전체를 새로운 Repository와 연결을 한다.
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">$ git remote add origin https://github.com/{user_id}/{repository_name}.git
@@ -207,6 +209,8 @@ $ hugo -t {theme_name}</code></pre></div>
 $ git submodule add https://github.com/{user_id}/{user_id}.github.io.git public</code></pre></div></p>
 
 <p><code>submodule</code> 이라는게 하위 <code>repository</code> 같은 느낌인데, <code>index.html</code> 파일이 <code>public</code> 폴더 안에 생겨서 hugo 파일은 따로 보관하고.. <code>public</code> 폴더만 <code>****.github.io</code>에 연결해서 사이트 기능을 하게 하는거 같다.</p>
+
+<h3 id="4-2-public만-연결">4-2. public만 연결</h3>
 
 <p>사이트만 올릴 려면 <code>public</code> 폴더에서 아래 하나만 실행하면 된다.
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">$ git remote add origin https://github.com/{user_id}/{user_id}.github.io.git</code></pre></div></p>
