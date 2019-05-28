@@ -64,7 +64,7 @@ if (!doNotTrack) {
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		WordPress 플러그인을 제작할려고 보면, Custom Post Type을 자주 접하게 된다. 가장 많이 사용하고, 그만큼 인터넷에 자료도 많고 쉽다.
-function register_item() { $labels = array( &#39;name&#39; =&gt; _x( &#39;Items&#39;, &#39;textdomain&#39; ), ); $args = array( &#39;labels&#39; =&gt; $labels, &#39;public&#39; =&gt; true, // (bool) default: false &#39;show_ui&#39; =&gt; true, // (bool) default: $public &#39;show_in_menu&#39; =&gt; true, // (bool) default: $show_ui &#39;query_var&#39; =&gt; true, &#39;has_archive&#39; =&gt; true, &#39;hierarchical&#39; =&gt; false, // (bool) default: false &#39;supports&#39; =&gt; array( &#39;title&#39;, &#39;editor&#39;, &#39;author&#39;, &#39;thumbnail&#39;, &#39;excerpt&#39;, &#39;comments&#39; ), ); register_post_type( &#39;item&#39;, $args ); } add_action( &#39;init&#39;, &#39;register_item&#39;, 0 );  참조) register_post_type() 참조) Post Type Generator - GenerateWP
+&lt;?php function register_item() { $labels = array( &#39;name&#39; =&gt; _x( &#39;Items&#39;, &#39;textdomain&#39; ), ); $args = array( &#39;labels&#39; =&gt; $labels, &#39;public&#39; =&gt; true, // (bool) default: false  &#39;show_ui&#39; =&gt; true, // (bool) default: $public  &#39;show_in_menu&#39; =&gt; true, // (bool) default: $show_ui  &#39;query_var&#39; =&gt; true, &#39;has_archive&#39; =&gt; true, &#39;hierarchical&#39; =&gt; false, // (bool) default: false  &#39;supports&#39; =&gt; array( &#39;title&#39;, &#39;editor&#39;, &#39;author&#39;, &#39;thumbnail&#39;, &#39;excerpt&#39;, &#39;comments&#39; ), ); register_post_type( &#39;item&#39;, $args ); } add_action( &#39;init&#39;, &#39;register_item&#39;, 0 ); ?
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
