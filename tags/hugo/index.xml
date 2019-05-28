@@ -20,8 +20,7 @@
       <description>5개의 사이트 생성기를 설치해 본 결과.. Hugo로 결정을 했고. 이제 그 설치 과정이다.
  정적 사이트 생성기 (Static Site Generator) 비교/선택   1. Golang 설치 Hugo는 Golang이라는 Google에서 만든 언어로 제작되었다고 한다. 하지만, 우리가 Hugo를 사용하면서 Golang을 쓸 일은 전혀 없다.
 Windows랑 Mac에 둘 다 설치해 봤는데. 그냥 사이트에서 운영체제에 맞는 파일 받아서 설치하면 된다. 간단하다.
-Golang 다운로드 페이지 ← 여기서 받아서 설치
-
+ Golang 다운로드 페이지  
 2. Hugo 설치 • Mac (by brew) $ brew install hugo 맥에 Brew가 안깔려 있어서, Brew 먼저 깔고 Hugo를 설치했다.</description>
     </item>
     

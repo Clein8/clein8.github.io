@@ -11,8 +11,7 @@
 <meta property="og:description" content="5개의 사이트 생성기를 설치해 본 결과.. Hugo로 결정을 했고. 이제 그 설치 과정이다.
  정적 사이트 생성기 (Static Site Generator) 비교/선택   1. Golang 설치 Hugo는 Golang이라는 Google에서 만든 언어로 제작되었다고 한다. 하지만, 우리가 Hugo를 사용하면서 Golang을 쓸 일은 전혀 없다.
 Windows랑 Mac에 둘 다 설치해 봤는데. 그냥 사이트에서 운영체제에 맞는 파일 받아서 설치하면 된다. 간단하다.
-Golang 다운로드 페이지 ← 여기서 받아서 설치
-
+ Golang 다운로드 페이지  
 2. Hugo 설치 • Mac (by brew) $ brew install hugo 맥에 Brew가 안깔려 있어서, Brew 먼저 깔고 Hugo를 설치했다." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://clein8.github.io/post/setup-hugo/" />
@@ -78,7 +77,9 @@ if (!doNotTrack) {
 
 <p><code>Windows</code>랑 <code>Mac</code>에 둘 다 설치해 봤는데. 그냥 사이트에서 운영체제에 맞는 파일 받아서 설치하면 된다. 간단하다.</p>
 
-<p><a href="https://golang.org/dl/" target="_blank">Golang 다운로드 페이지</a> ← 여기서 받아서 설치</p>
+<ul>
+<li><a href="https://golang.org/dl/" target="_blank">Golang 다운로드 페이지</a></li>
+</ul>
 
 <p><br><br></p>
 
@@ -203,21 +204,23 @@ $ hugo -t {theme_name}</code></pre></div>
 
 <h3 id="4-1-둘-다-연결">4-1. 둘 다 연결</h3>
 
-<p>일단 <code>{site_name}</code> 폴더 전체를 새로운 Repository와 연결을 한다.
+<p>일단 <code>{site_name}</code> 폴더 전체를 새로운 <code>Repository</code>와 연결을 한다.
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">$ git remote add origin https://github.com/{user_id}/{repository_name}.git
 
 $ git submodule add https://github.com/{user_id}/{user_id}.github.io.git public</code></pre></div></p>
 
-<p><code>submodule</code> 이라는게 하위 <code>repository</code> 같은 느낌인데, <code>index.html</code> 파일이 <code>public</code> 폴더 안에 생겨서 hugo 파일은 따로 보관하고.. <code>public</code> 폴더만 <code>****.github.io</code>에 연결해서 사이트 기능을 하게 하는거 같다.</p>
+<p><code>submodule</code> 이라는게 하위 <code>Repository</code> 같은 느낌인데, <code>index.html</code> 파일이 <code>public</code> 폴더 안에 생겨서 hugo 파일은 따로 보관하고.. <code>public</code> 폴더만 <code>****.github.io</code>에 연결해서 사이트 기능을 하게 하는거 같다.</p>
 
 <h3 id="4-2-public만-연결">4-2. public만 연결</h3>
 
 <p>사이트만 올릴 려면 <code>public</code> 폴더에서 아래 하나만 실행하면 된다.
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">$ git remote add origin https://github.com/{user_id}/{user_id}.github.io.git</code></pre></div></p>
 
-<p><br></p>
+<p><br><br></p>
 
-<h3 id="3-8-github에-push">3-8. Github에 Push</h3>
+<h2 id="5-github에-push">5. Github에 Push</h2>
+
+<hr />
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">$ hugo
 $ cd public
@@ -229,15 +232,87 @@ $ git add .
 $ git commit -m &#34;blah blah&#34;
 $ git push origin master</code></pre></div>
 
-<p><code>push</code>하기 전에 <code>Build</code>는 습관적으로 해주자 ㅎㅎ</p>
-
 <p><code>public</code> 폴더 먼저 push 하고. hugo 폴더 나중에 Push해야 한다.. 아마 <code>submodule</code> 때문인거 같다.</p>
 
-<p>올릴때마다 이 짓을 해야 하는게 너무 불편해서 검색을 해 보니 쉘 스크립트를 만드는 방법이 있었다. 쉘 스크립트 말고 다른 방법도 있는거 같은데. 이것으로 만족하도록 한다.</p>
+<p><code><a href="https://hugo.io" target="_blank">Hugo</a></code>에 글을 작성하거나 수정 할 때 마다 <code><a href="https://hugo.io" target="_blank">Hugo</a></code>를 <code>Build</code>하고, <code>Repository</code>에 <code>Push</code>하는 게 여간 귀찮은게 아니다. 그래서 방법을 찾아 보니, <code>Hugo Docs</code>에 쉘 스크립트를 이용해 <code>Build</code>와 <code>Push</code>를 간단하게 하는 방법이 나와 있다. 다른 수많이 기능들도 있다. 천천히 하나씩 살펴 봐야겠다.</p>
 
 <ul>
-<li><a href="/post/push_hugo/">Github에 Hugo를 Push하는 스크립트</a></li>
+<li><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script" target="_blank">Host on Github - Put it Into a Script</a></li>
 </ul>
+
+<p><code>MacOS terminal</code> 사용시 아래처럼 입력해 주면 된다. 앞에 sh를 안붙여 주니까.. 권한이 없네. 파일을 찾을 수 없네.. 어쩌고 말이 많았는데&hellip; sh를 붙여주니 해결되었다.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-script" data-lang="script">$ sh deploy.sh &#34;blah blah&#34;</code></pre></div></p>
+
+<p><br><br></p>
+
+<h3 id="5-1-두개-연결해-놓은-경우">5-1. 두개 연결해 놓은 경우</h3>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-script" data-lang="script"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
+
+<span style="color:#75715e"># Build the project.</span>
+hugo <span style="color:#75715e"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+
+<span style="color:#75715e"># Go To Public folder</span>
+cd public
+<span style="color:#75715e"># Add changes to git.</span>
+git add .
+
+<span style="color:#75715e"># Commit changes.</span>
+msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+
+<span style="color:#75715e"># Push source and build repos.</span>
+git push origin master
+
+<span style="color:#75715e"># Come Back up to the Project Root</span>
+cd ..
+
+<span style="color:#75715e"># Add changes to git.</span>
+git add .
+
+<span style="color:#75715e"># Commit changes.</span>
+msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+
+<span style="color:#75715e"># Push source and build repos.</span>
+git push origin master</code></pre></div>
+
+<p><br></p>
+
+<h3 id="5-2-public만-연결하는-경우">5-2. public만 연결하는 경우</h3>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-script" data-lang="script"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
+
+<span style="color:#75715e"># Build the project.</span>
+hugo <span style="color:#75715e"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+
+<span style="color:#75715e"># Go To Public folder</span>
+cd public
+<span style="color:#75715e"># Add changes to git.</span>
+git add .
+
+<span style="color:#75715e"># Commit changes.</span>
+msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+
+<span style="color:#75715e"># Push source and build repos.</span>
+git push origin master
+
+<span style="color:#75715e"># Come Back up to the Project Root</span>
+cd ..</code></pre></div>
 
 <p><br></p>
 
