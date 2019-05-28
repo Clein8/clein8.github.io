@@ -41,7 +41,7 @@
     <item>
       <title>Hexo</title>
       <link>http://clein8.github.io/tags/hexo/</link>
-      <pubDate>Mon, 13 May 2019 13:14:00 +0900</pubDate>
+      <pubDate>Mon, 13 May 2019 11:07:00 +0900</pubDate>
       
       <guid>http://clein8.github.io/tags/hexo/</guid>
       <description></description>
@@ -59,7 +59,7 @@
     <item>
       <title>Jekyll</title>
       <link>http://clein8.github.io/tags/jekyll/</link>
-      <pubDate>Mon, 13 May 2019 13:14:00 +0900</pubDate>
+      <pubDate>Mon, 13 May 2019 11:07:00 +0900</pubDate>
       
       <guid>http://clein8.github.io/tags/jekyll/</guid>
       <description></description>
@@ -71,6 +71,15 @@
       <pubDate>Mon, 13 May 2019 11:07:00 +0900</pubDate>
       
       <guid>http://clein8.github.io/tags/netlify/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pages</title>
+      <link>http://clein8.github.io/tags/pages/</link>
+      <pubDate>Mon, 13 May 2019 13:14:00 +0900</pubDate>
+      
+      <guid>http://clein8.github.io/tags/pages/</guid>
       <description></description>
     </item>
     
