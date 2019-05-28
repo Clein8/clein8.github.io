@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko-kr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>정적 사이트 생성기 (Static Site Generator) - Clein&#39;s Repository</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	
+	
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Clein&#39;s Repository" rel="home">
+				<div class="logo__title">Clein&#39;s Repository</div>
+				
+			</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">정적 사이트 생성기 (Static Site Generator)</h1>
+			
+		</header><div class="content post__content clearfix">
+			
+
+<p>인터넷 검색하다 보면 사람들이 <code>****.github.io</code>라는 주소로 블로깅을 하는걸 보고, 처음에는 <code><a href="https://github.com">Github</a></code>에서 블로그 서비스를 시작한줄 알았다.</p>
+
+<p><code>Tistory</code>에서 <code>Code Highlighter</code>사용하는게 너무 불편해서, 나도 <code>****.github.io</code>를 사용해 볼까 하고 검색을 해 보니 <code>정적 블로그</code>라는 것을 알게 되었다.</p>
+
+<p><code>정적 사이트 생성기</code>를 이용해서 블로그를 만드는 경우가 많다 보니 <code>정적 블로그</code>라고 불리게 된 것 같다. 그러나 몇개의 사이트 생성기를 사용해 보니 영어를 직역한 표현이긴 해도 <code>정적 사이트 생성기</code>라는 이름이 맞는 이름 같다.
+<br><br><br></p>
+
+<h2 id="정적-사이트-생성기-종류">❏ 정적 사이트 생성기 종류</h2>
+
+<hr />
+
+<p>일단, 선두주자로 제일 오래된 <code><a href="https://jekyllrb.com">Jekyll</a></code>이 있다. 검색하면 제일 많이 나오고, 만들어진 사이트도 많다.</p>
+
+<p>그 다음 <code><a href="https://hugo.io">Hugo</a></code> 와 <code><a href="https://hexo.io">Hexo</a></code>를 알게 되어서, 처음에는 이 셋중에 어느걸 골라야 하는지 인터넷에서 검색도 해보고 <a href="https://stackshare.io/stackups/hexo-vs-hugo_2-vs-jekyll">stackshare 비교</a>등도 봤지만, 뭐가 뭔지 하나도 모르겠어서 어쩌다 보니.. 셋 다 설치해 보았다. 삽질의 결과 위 셋 중에는 <code><a href="https://hugo.io">Hugo</a></code>가 제일 마음에 들어서. <code><a href="https://hugo.io">Hugo</a></code>로 정착하게 됬다.</p>
+
+<p>그러던 도중 <code><a href="https://vuepress.vuejs.org">VuePress</a></code> 와 <code><a href="https://www.gatsbyjs.org">Gatsby</a></code>라는 것도 알게 되었는데, <code><a href="https://hugo.io">Hugo</a></code>보다 좋아 보이길래. 갈아탈 요량으로 설치를 해 봤는데. 개인적으로 <code><a href="https://vuepress.vuejs.org">VuePress</a></code>가 제일 깔끔해 보이고 마음에 들었지만, <code><a href="https://vuepress.vuejs.org">VuePress</a></code>는 블로그 보다는 기술 문서 등에 사용하기에 좋아 보이고, 궂이 블로그를 만들수는 있긴 한거 같은데.. 블로그에는 그냥 <code><a href="https://hugo.io">Hugo</a></code>가 더 낫다는 결론이 나왔다.</p>
+
+<p>다음은 각 사이트 생성기들의 개발 언어들인데, 딱리 알 필요는 없는거 같다.. 아직 오래 사용해 보진 않았지만, 처음 사이트 생성할 때 명령어 몇줄 빼고는 쓸 일이 없는거 같다. (뭔가 더 비교해서 채워 넣을려고 했는데 귀찮다.)</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"><a href="https://jekyllrb.com">Jekyll</a></th>
+<th align="center"><a href="https://hugo.io">Hugo</a></th>
+<th align="center"><a href="https://hexo.io">Hexo</a></th>
+<th align="center"><a href="https://vuepress.vuejs.org">VuePress</a></th>
+<th align="center"><a href="https://www.gatsbyjs.org">Gatsby</a></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">Ruby</td>
+<td align="center">Golang</td>
+<td align="center">Node.js</td>
+<td align="center">Vue.js</td>
+<td align="center">React</td>
+</tr>
+</tbody>
+</table>
+
+<p><br><br></p>
+
+<h2 id="github-pages">❏ Github Pages</h2>
+
+<hr />
+
+<p><code><a href="https://pages.github.com">Github Pages</a></code>의 사용 방법은 간단하다. <code><a href="https://github.com">Github</a></code>에 <code>Repository</code> 생성할 때 <code>Repository Name</code>에 <code>{user_id}.github.io</code>로 생성하면 끝난다.
+<br><br><br></p>
+
+<h2 id="netlify">❏ Netlify</h2>
+
+<hr />
+
+<p>아마 <code><a href="https://www.gatsbyjs.org">Gatsby</a></code>를 검색하다가 알게 된거 같다. <code>****.github.io</code>를 사용할 거라서 별 관심이 없긴 하지만, <code><a href="https://www.netlify.com">Netlify</a></code>에 대해 나중에 알아볼 시간을 가져야 할꺼 같다.</p>
+
+<p><br></p>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%EC%A0%95%EC%A0%81-%EB%B8%94%EB%A1%9C%EA%B7%B8/" rel="tag">정적 블로그</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%83%9D%EC%84%B1%EA%B8%B0/" rel="tag">사이트 생성기</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/github/" rel="tag">Github</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/jekyll/" rel="tag">Jekyll</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/hexo/" rel="tag">Hexo</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/vuepress/" rel="tag">VuePress</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/gatsby/" rel="tag">Gatsby</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/netlify/" rel="tag">Netlify</a></li>
+	</ul>
+</div>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<p class="authorbox__warning"><strong>WARNING:</strong> Authorbox is activated, but [Author] parameters are not specified.</p>
+</div>
+
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 Clein&#39;s Repository.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script></body>
+</html>

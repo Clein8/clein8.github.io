@@ -6,20 +6,34 @@
     <description>Recent content in Jekyll on Clein&#39;s Repository</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 28 Mar 2019 20:04:28 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 13 May 2019 13:14:00 +0900</lastBuildDate>
     
 	<atom:link href="http://clein8.github.io/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Github Pages에 Hugo 설치하기</title>
-      <link>http://clein8.github.io/post/setup_hugo/</link>
-      <pubDate>Thu, 28 Mar 2019 20:04:28 +0900</pubDate>
+      <link>http://clein8.github.io/post/setup-hugo/</link>
+      <pubDate>Mon, 13 May 2019 13:14:00 +0900</pubDate>
       
-      <guid>http://clein8.github.io/post/setup_hugo/</guid>
-      <description>❏ Github Pages 언제부턴가 구글에서 코드 검색을 하다 보면 .github.io 사이트를 자주 볼 수 있었다. 잠깐 찾아보니 Github Pages라길래, Github에서 블로그 같은 서비스를 만들었나 싶었다.
-그러던 도중 .github.io 사이트들에서 보이는 Code Highlighter가 Tistory에 설치하는 Code Highlighter보다 예뻐 보이고, 코드 입력하기도 더 쉬워 보이길래 좀 더 관심을 가지게 되었다. 며칠을 검색해 보니 코드 저장 해놓기에는 Tistory보다 좋다고 생각되어 시작해 보기로 했다.
-그리고, 다 설치하고보니 마크다운(Markdown)으로 글 작성하는게 생각보다 편하고 좋다. ㅎㅎ</description>
+      <guid>http://clein8.github.io/post/setup-hugo/</guid>
+      <description>5개의 사이트 생성기를 설치해 본 결과.. Hugo로 결정을 했고. 이제 그 설치 과정이다.
+ 정적 사이트 생성기 (Static Site Generator)   1. Golang 설치 Hugo는 Golang이라는 Google에서 만든 언어로 제작되었다고 한다. 하지만, 우리가 Hugo를 사용하면서 Golang을 쓸 일은 전혀 없다.
+Windows랑 Mac에 둘 다 설치해 봤는데. 그냥 사이트에서 운영체제에 맞는 파일 받아서 설치하면 된다. 간단하다.
+Golang 다운로드 페이지 &amp;lt;- 여기에서 받아서 설치
+
+2. Hugo 설치 • Mac (by brew) $ brew install hugo 3.</description>
+    </item>
+    
+    <item>
+      <title>정적 사이트 생성기 (Static Site Generator)</title>
+      <link>http://clein8.github.io/post/static-site-generator/</link>
+      <pubDate>Mon, 13 May 2019 11:07:00 +0900</pubDate>
+      
+      <guid>http://clein8.github.io/post/static-site-generator/</guid>
+      <description>인터넷 검색하다 보면 사람들이 ****.github.io라는 주소로 블로깅을 하는걸 보고, 처음에는 Github에서 블로그 서비스를 시작한줄 알았다.
+Tistory에서 Code Highlighter사용하는게 너무 불편해서, 나도 ****.github.io를 사용해 볼까 하고 검색을 해 보니 정적 블로그라는 것을 알게 되었다.
+정적 사이트 생성기를 이용해서 블로그를 만드는 경우가 많다 보니 정적 블로그라고 불리게 된 것 같다. 그러나 몇개의 사이트 생성기를 사용해 보니 영어를 직역한 표현이긴 해도 정적 사이트 생성기라는 이름이 맞는 이름 같다. ❏ 정적 사이트 생성기 종류 일단, 선두주자로 제일 오래된 Jekyll이 있다.</description>
     </item>
     
   </channel>

@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Clein&#39;s Repository</title>
-    <link>http://clein8.github.io/</link>
-    <description>Recent content on Clein&#39;s Repository</description>
+    <title>Vuepress on Clein&#39;s Repository</title>
+    <link>http://clein8.github.io/tags/vuepress/</link>
+    <description>Recent content in Vuepress on Clein&#39;s Repository</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 13 May 2019 13:14:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 13 May 2019 11:07:00 +0900</lastBuildDate>
     
-	<atom:link href="http://clein8.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://clein8.github.io/tags/vuepress/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Github Pages에 Hugo 설치하기</title>
-      <link>http://clein8.github.io/post/setup-hugo/</link>
-      <pubDate>Mon, 13 May 2019 13:14:00 +0900</pubDate>
-      
-      <guid>http://clein8.github.io/post/setup-hugo/</guid>
-      <description>5개의 사이트 생성기를 설치해 본 결과.. Hugo로 결정을 했고. 이제 그 설치 과정이다.
- 정적 사이트 생성기 (Static Site Generator)   1. Golang 설치 Hugo는 Golang이라는 Google에서 만든 언어로 제작되었다고 한다. 하지만, 우리가 Hugo를 사용하면서 Golang을 쓸 일은 전혀 없다.
-Windows랑 Mac에 둘 다 설치해 봤는데. 그냥 사이트에서 운영체제에 맞는 파일 받아서 설치하면 된다. 간단하다.
-Golang 다운로드 페이지 &amp;lt;- 여기에서 받아서 설치
-
-2. Hugo 설치 • Mac (by brew) $ brew install hugo 3.</description>
-    </item>
     
     <item>
       <title>정적 사이트 생성기 (Static Site Generator)</title>
