@@ -8,11 +8,8 @@
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<meta property="og:title" content="WordPress - Custom Post Type" />
-<meta property="og:description" content="5개의 사이트 생성기를 설치해 본 결과.. Hugo로 결정을 했고. 이제 그 설치 과정이다.
- 정적 사이트 생성기 (Static Site Generator) 비교/선택   1. Golang 설치 Hugo는 Golang이라는 Google에서 만든 언어로 제작되었다고 한다. 하지만, 우리가 Hugo를 사용하면서 Golang을 쓸 일은 전혀 없다.
-Windows랑 Mac에 둘 다 설치해 봤는데. 그냥 사이트에서 운영체제에 맞는 파일 받아서 설치하면 된다. 간단하다.
- Golang 다운로드 페이지  
-2. Hugo 설치 • Mac (by brew) $ brew install hugo 맥에 Brew가 안깔려 있어서, Brew 먼저 깔고 Hugo를 설치했다." />
+<meta property="og:description" content="WordPress 플러그인을 제작할려고 보면, Custom Post Type을 자주 접하게 된다. 가장 많이 사용하고, 그만큼 인터넷에 자료도 많고 쉽다.
+function register_item() { $labels = array( &#39;name&#39; =&gt; _x( &#39;Items&#39;, &#39;textdomain&#39; ), ); $args = array( &#39;labels&#39; =&gt; $labels, &#39;public&#39; =&gt; true, // (bool) default: false &#39;show_ui&#39; =&gt; true, // (bool) default: $public &#39;show_in_menu&#39; =&gt; true, // (bool) default: $show_ui &#39;query_var&#39; =&gt; true, &#39;has_archive&#39; =&gt; true, &#39;hierarchical&#39; =&gt; false, // (bool) default: false &#39;supports&#39; =&gt; array( &#39;title&#39;, &#39;editor&#39;, &#39;author&#39;, &#39;thumbnail&#39;, &#39;excerpt&#39;, &#39;comments&#39; ), ); register_post_type( &#39;item&#39;, $args ); } add_action( &#39;init&#39;, &#39;register_item&#39;, 0 );  참조) register_post_type() 참조) Post Type Generator - GenerateWP" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://clein8.github.io/post/wordpress-custom-post-type/" />
 <meta property="article:published_time" content="2019-05-28T16:21:00&#43;09:00"/>
@@ -60,259 +57,31 @@ if (!doNotTrack) {
 			<h1 class="post__title">WordPress - Custom Post Type</h1>
 			
 		</header><div class="content post__content clearfix">
-			
+			<p>WordPress 플러그인을 제작할려고 보면, Custom Post Type을 자주 접하게 된다.
+가장 많이 사용하고, 그만큼 인터넷에 자료도 많고 쉽다.</p>
 
-<p>5개의 사이트 생성기를 설치해 본 결과.. <code><a href="https://hugo.io" target="_blank">Hugo</a></code>로 결정을 했고. 이제 그 설치 과정이다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">  function register_item() {
+    $labels = array(
+      &#39;name&#39;               =&gt; _x( &#39;Items&#39;, &#39;textdomain&#39; ),
+    );
+    $args = array(
+      &#39;labels&#39;             =&gt; $labels,
+      &#39;public&#39;             =&gt; true, // (bool) default: false
+      &#39;show_ui&#39;            =&gt; true, // (bool) default: $public
+      &#39;show_in_menu&#39;       =&gt; true, // (bool) default: $show_ui
+      &#39;query_var&#39;          =&gt; true,
+      &#39;has_archive&#39;        =&gt; true,
+      &#39;hierarchical&#39;       =&gt; false, // (bool) default: false
+      &#39;supports&#39;           =&gt; array( &#39;title&#39;, &#39;editor&#39;, &#39;author&#39;, &#39;thumbnail&#39;, &#39;excerpt&#39;, &#39;comments&#39; ),
+    );
+    register_post_type( &#39;item&#39;, $args );
+  }
+  add_action( &#39;init&#39;, &#39;register_item&#39;, 0 );</code></pre></div>
 
 <ul>
-<li><a href="/post/static-site-generator/">정적 사이트 생성기 (Static Site Generator) 비교/선택</a>
-<br><br></li>
+<li>참조) <a href="https://developer.wordpress.org/reference/functions/register_post_type/" target="_blank">register_post_type()</a></li>
+<li>참조) <a href="https://generatewp.com/post-type" target="_blank">Post Type Generator - GenerateWP</a></li>
 </ul>
-
-<h2 id="1-golang-설치">1. Golang 설치</h2>
-
-<hr />
-
-<p><code><a href="https://hugo.io" target="_blank">Hugo</a></code>는 <code>Golang</code>이라는 <code>Google</code>에서 만든 언어로 제작되었다고 한다. 하지만, 우리가 <code><a href="https://hugo.io" target="_blank">Hugo</a></code>를 사용하면서 <code>Golang</code>을 쓸 일은 전혀 없다.</p>
-
-<p><code>Windows</code>랑 <code>Mac</code>에 둘 다 설치해 봤는데. 그냥 사이트에서 운영체제에 맞는 파일 받아서 설치하면 된다. 간단하다.</p>
-
-<ul>
-<li><a href="https://golang.org/dl/" target="_blank">Golang 다운로드 페이지</a></li>
-</ul>
-
-<p><br><br></p>
-
-<h2 id="2-hugo-설치">2. Hugo 설치</h2>
-
-<hr />
-
-<h4 id="mac-by-brew">• Mac (by brew)</h4>
-
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ brew install hugo</code></pre></div>
-맥에 Brew가 안깔려 있어서, Brew 먼저 깔고 Hugo를 설치했다.</p>
-
-<p><br><br></p>
-
-<h2 id="3-hugo-사이트-생성-및-기본-설정">3. Hugo 사이트 생성 및 기본 설정</h2>
-
-<hr />
-
-<h3 id="3-1-hugo-사이트-생성">3-1. Hugo 사이트 생성</h3>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ hugo new site {site_name}</code></pre></div>
-
-<p>위에 처럼 입력해 주시면 아래 처럼 축하한다는 메시지와 함께, <code>{site_name}</code>에 입력한 이름의 폴더가 생성 된다.</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Congratulations! Your new Hugo site is created in /Users/{user_name}/{site_name}.
-
-Just a few more steps and you&#39;re ready to go:
-
-1. Download a theme into the same-named folder.
-   Choose a theme from https://themes.gohugo.io/, or
-   create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command.
-2. Perhaps you want to add some content. You can add single files
-   with &#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;.
-3. Start the built-in live server via &#34;hugo server&#34;.
-
-Visit https://gohugo.io/ for quickstart guide and full documentation.</code></pre></div>
-
-<p><br></p>
-
-<h3 id="3-2-테마-추가">3-2. 테마 추가</h3>
-
-<p><code><a href="https://themes.gohugo.io/" target="_blank">Hugo Themes</a></code>에 들어가서 마음에 드는 테마를 선택 한 후, <code>Homepage</code>를 누르면 해당 테마의 <code>Repository</code>로 이동합니다. <code>Repository</code>에서 git 주소를 복사해서 <code>{theme_url}</code>에 입력하면 된다.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ cd themes
-$ git clone {theme_url}
-$ cd ..</code></pre></div>
-<em>cf. 현재 이 사이트에서 사용중인 테마는 <code><a href="https://github.com/vimux/mainroad/" target="_blank">Mainroad</a></code>라는 테마 입니다.</em></p>
-
-<p><br></p>
-
-<h3 id="3-3-hugo-기본-설정-config-toml">3-3. Hugo 기본 설정 (config.toml)</h3>
-
-<p><code>Hugo</code>사이트를 처음 생성하고 <code>config.toml</code>파일을 열어보면 다음과 같이 나온다.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">1</span>baseURL = &#34;http://example.org/&#34;<span style="color:#960050;background-color:#1e0010">
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">2</span><span style="color:#960050;background-color:#1e0010"></span>languageCode = &#34;en-us&#34;<span style="color:#960050;background-color:#1e0010">
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">3</span><span style="color:#960050;background-color:#1e0010"></span>title = &#34;My New Hugo Site&#34;</code></pre></div>
-다른 <code>사이트 생성기</code>에도 비슷한 설정 파일이 있다. <code>Jekyll</code>보다 <code>Hugo</code>가 더 간단한거 같다. (벌써 <code>Jekyll</code> config 내용이 기억이 잘 안난다. ㅠㅠ)</p>
-
-<p>다음과 같이 설정하면 된다. Build할 때 <code>Theme</code>를 따로 지정 할 수도 있지만 여기에 테마를 적어 놓으면 기본 Build시 <code>config.toml</code> 파일 안에 적혀 있는 <code>Theme</code>를 사용한다.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">1</span>baseURL = &#34;https://clein8.github.io/&#34;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">2</span>languageCode = &#34;ko-kr&#34;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">3</span>title = &#34;Clein&#39;s Repository&#34;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">4</span>theme = &#34;Mainroad&#34;
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">5</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">6</span>googleAnalytics = &#34;&#34;</code></pre></div>
-<a href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank">Hugo Syntax Highlighting</a> &lt;- <code>Highlighter</code> 설정 참조 (이건 더 파서 글을 새로 작성해야 겠다.)</p>
-
-<p>나머지 설정은 <code>Theme</code>테마 제작자 마다 설정 방법이 달라서 테마 제작자가 작성해 놓은 설정방법을 참조.</p>
-
-<p><br></p>
-
-<h3 id="3-4-hugo-서버-localhost-실행">3-4. Hugo 서버 localhost 실행</h3>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">$ hugo server -D</code></pre></div>
-
-<p>이 서버는 Hugo 사이트가 잘 만들어 졌는지 확인하고, <code>마크다운</code>으로 글 작성하면서 브라우저에 어떻게 적용하는지 볼 수 있는지 확인할 수 있게 해주는 <code>localhost</code> 서버이다.</p>
-
-<p><code>-D</code>는 비공개 글까지 다 보여 주라는 옵션이다. 글 작성시 <code>draft: true</code>로 되어 있으면 사이트에 비공개 처리 되는데. draft 설정 무시하고 다 보여주는 옵션이다. 확인용으로 사용하기 때문에 <code>-D</code> 붙이는게 편하다.. 습관적으로 붙이도록 하자. (다른 블로그로 설명하자면 관리자 로그인 했을때 비공개 글 까지 보이는 거라고 생각하면 쉽다.)</p>
-
-<p>접속은 <a href="http://localhost:1313" target="_blank">http://localhost:1313</a>, 종료는 <code>Ctrl+C</code></p>
-
-<p>따로 <code>Build</code>는 하지 않고, 이미 <code>Build</code>된 파일만 보여주는 용도로 사용되는거 같다. (서버 도는 중에, 카테고리 또는 태그를 새로 추가 해도 서버 중지 하고 <code>Build</code>다시 할 때 까지 해당 링크가 404 뜬다.)</p>
-
-<p><br></p>
-
-<h3 id="3-5-새-글-작성">3-5. 새 글 작성</h3>
-
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">$ hugo new post/test.md</code></pre></div>
-위 처럼 입력하면 <code>/content/post/test.md</code>파일이 생성된다. 아래 처럼 작성해 주면 된다.</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">---
-title: &#34;test&#34;
-date: 2019-03-29T16:49:59+09:00
-draft: true
----
-여기에다 마크다운으로 본문 입력</code></pre></div>
-
-<p><code>post</code>는 기본 글 설정이 되어 있는 폴더이다. <code>post</code> 폴더에 글을 쓰면 <code>index page</code>에 알아서 추가된다. 아래 처럼 특정 페이지나 따로 폴더를 입력해도 된다.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">ex)
-$ hugo new about.md
-$ hugo new books/book-name.md</code></pre></div></p>
-
-<p><br></p>
-
-<h3 id="3-6-hugo-build">3-6. Hugo Build</h3>
-
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">$ hugo
-
-or
-
-$ hugo -t {theme_name}</code></pre></div>
-간단하다. hugo만 입력하면 된다. <code>-t</code> 옵션으로 다른 테마 선택 가능하다. 하지만 딱히 그럴 이유도 없고<code>config.toml</code> 파일에 기본 <code>Theme</code>를 지정해 놨기 때문에 그냥 <code>Build</code>하면 된다.</p>
-
-<p><code>public</code> 폴더에 생긴 파일들을 <code><a href="https://pages.github.com/" target="_blank">Github Pages</a></code>에 올려 주면 된다.</p>
-
-<p><br></p>
-
-<h2 id="4-hugo-git-연결">4. Hugo Git 연결</h2>
-
-<hr />
-
-<p><code>Hugo</code> 전체를 Git에 올릴려면은 2개의 저장소가 필요하다. 하나는 Hugo file용 다른 하나는 Build된 <code>public</code> 폴더 안에 파일 용이다. <code>****.github.io</code>에는 Build된 <code>public</code> 폴더 안에 든 파일을 올려야 한다. <s>처음에는 <code>public</code> 폴더 용만 올릴려고 생각했었는데, 다른 컴퓨터에서 글을 쓰거나 나중에 컴퓨터를 바꿀 일을 대비해서. 그냥 둘 다 올려 두기로 했다.</s> 지금은 다시 맥북으로만 블로깅을 한다고 생각하고 <code>public</code> 폴더 하나만 연결해 뒀다.</p>
-
-<h3 id="4-1-둘-다-연결">4-1. 둘 다 연결</h3>
-
-<p>일단 <code>{site_name}</code> 폴더 전체를 새로운 <code>Repository</code>와 연결을 한다.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">$ git remote add origin https://github.com/{user_id}/{repository_name}.git
-
-$ git submodule add https://github.com/{user_id}/{user_id}.github.io.git public</code></pre></div></p>
-
-<p><code>submodule</code> 이라는게 하위 <code>Repository</code> 같은 느낌인데, <code>index.html</code> 파일이 <code>public</code> 폴더 안에 생겨서 hugo 파일은 따로 보관하고.. <code>public</code> 폴더만 <code>****.github.io</code>에 연결해서 사이트 기능을 하게 하는거 같다.</p>
-
-<h3 id="4-2-public만-연결">4-2. public만 연결</h3>
-
-<p>사이트만 올릴 려면 <code>public</code> 폴더에서 아래 하나만 실행하면 된다.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">$ git remote add origin https://github.com/{user_id}/{user_id}.github.io.git</code></pre></div></p>
-
-<p><br><br></p>
-
-<h2 id="5-github에-push">5. Github에 Push</h2>
-
-<hr />
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markown" data-lang="markown">$ hugo
-$ cd public
-$ git add .
-$ git commit -m &#34;blah blah&#34;
-$ git push origin master
-$ cd ..
-$ git add .
-$ git commit -m &#34;blah blah&#34;
-$ git push origin master</code></pre></div>
-
-<p><code>public</code> 폴더 먼저 push 하고. hugo 폴더 나중에 Push해야 한다.. 아마 <code>submodule</code> 때문인거 같다.</p>
-
-<p><code><a href="https://hugo.io" target="_blank">Hugo</a></code>에 글을 작성하거나 수정 할 때 마다 <code><a href="https://hugo.io" target="_blank">Hugo</a></code>를 <code>Build</code>하고, <code>Repository</code>에 <code>Push</code>하는 게 여간 귀찮은게 아니다. 그래서 방법을 찾아 보니, <code>Hugo Docs</code>에 쉘 스크립트를 이용해 <code>Build</code>와 <code>Push</code>를 간단하게 하는 방법이 나와 있다. 다른 수많이 기능들도 있다. 천천히 하나씩 살펴 봐야겠다.</p>
-
-<ul>
-<li><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script" target="_blank">Host on Github - Put it Into a Script</a></li>
-</ul>
-
-<p><code>MacOS terminal</code> 사용시 아래처럼 입력해 주면 된다. 앞에 sh를 안붙여 주니까.. 권한이 없네. 파일을 찾을 수 없네.. 어쩌고 말이 많았는데&hellip; sh를 붙여주니 해결되었다.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-script" data-lang="script">$ sh deploy.sh &#34;blah blah&#34;</code></pre></div></p>
-
-<p><br><br></p>
-
-<h3 id="5-1-두개-연결해-놓은-경우">5-1. 두개 연결해 놓은 경우</h3>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-script" data-lang="script"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>
-echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
-
-<span style="color:#75715e"># Build the project.</span>
-hugo <span style="color:#75715e"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
-
-<span style="color:#75715e"># Go To Public folder</span>
-cd public
-<span style="color:#75715e"># Add changes to git.</span>
-git add .
-
-<span style="color:#75715e"># Commit changes.</span>
-msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
-  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
-<span style="color:#66d9ef">fi</span>
-git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
-
-<span style="color:#75715e"># Push source and build repos.</span>
-git push origin master
-
-<span style="color:#75715e"># Come Back up to the Project Root</span>
-cd ..
-
-<span style="color:#75715e"># Add changes to git.</span>
-git add .
-
-<span style="color:#75715e"># Commit changes.</span>
-msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
-  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
-<span style="color:#66d9ef">fi</span>
-git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
-
-<span style="color:#75715e"># Push source and build repos.</span>
-git push origin master</code></pre></div>
-
-<p><br></p>
-
-<h3 id="5-2-public만-연결하는-경우">5-2. public만 연결하는 경우</h3>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-script" data-lang="script"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>
-echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
-
-<span style="color:#75715e"># Build the project.</span>
-hugo <span style="color:#75715e"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
-
-<span style="color:#75715e"># Go To Public folder</span>
-cd public
-<span style="color:#75715e"># Add changes to git.</span>
-git add .
-
-<span style="color:#75715e"># Commit changes.</span>
-msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
-  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
-<span style="color:#66d9ef">fi</span>
-git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
-
-<span style="color:#75715e"># Push source and build repos.</span>
-git push origin master
-
-<span style="color:#75715e"># Come Back up to the Project Root</span>
-cd ..</code></pre></div>
 
 <p><br></p>
 

@@ -63,11 +63,8 @@ if (!doNotTrack) {
 		
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		5개의 사이트 생성기를 설치해 본 결과.. Hugo로 결정을 했고. 이제 그 설치 과정이다.
- 정적 사이트 생성기 (Static Site Generator) 비교/선택   1. Golang 설치 Hugo는 Golang이라는 Google에서 만든 언어로 제작되었다고 한다. 하지만, 우리가 Hugo를 사용하면서 Golang을 쓸 일은 전혀 없다.
-Windows랑 Mac에 둘 다 설치해 봤는데. 그냥 사이트에서 운영체제에 맞는 파일 받아서 설치하면 된다. 간단하다.
- Golang 다운로드 페이지  
-2. Hugo 설치 • Mac (by brew) $ brew install hugo 맥에 Brew가 안깔려 있어서, Brew 먼저 깔고 Hugo를 설치했다.
+		WordPress 플러그인을 제작할려고 보면, Custom Post Type을 자주 접하게 된다. 가장 많이 사용하고, 그만큼 인터넷에 자료도 많고 쉽다.
+function register_item() { $labels = array( &#39;name&#39; =&gt; _x( &#39;Items&#39;, &#39;textdomain&#39; ), ); $args = array( &#39;labels&#39; =&gt; $labels, &#39;public&#39; =&gt; true, // (bool) default: false &#39;show_ui&#39; =&gt; true, // (bool) default: $public &#39;show_in_menu&#39; =&gt; true, // (bool) default: $show_ui &#39;query_var&#39; =&gt; true, &#39;has_archive&#39; =&gt; true, &#39;hierarchical&#39; =&gt; false, // (bool) default: false &#39;supports&#39; =&gt; array( &#39;title&#39;, &#39;editor&#39;, &#39;author&#39;, &#39;thumbnail&#39;, &#39;excerpt&#39;, &#39;comments&#39; ), ); register_post_type( &#39;item&#39;, $args ); } add_action( &#39;init&#39;, &#39;register_item&#39;, 0 );  참조) register_post_type() 참조) Post Type Generator - GenerateWP
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
