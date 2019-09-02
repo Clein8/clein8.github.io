@@ -65,7 +65,7 @@ if (!doNotTrack) {
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		Flutter
-void main() =&gt; runApp(App()); class HomePage extends StatefulWidget { HomePage({Key key, this.title}) : super(key: key); final String title; @override _HomePageState createState() =&gt; _HomePageState(); } BottomBavigationBar
+import &#39;package:flutter/foundation.dart&#39; as foundation; import &#39;package:flutter/cupertino.dart&#39;; import &#39;package:flutter/material.dart&#39;; import &#39;package:good_choice/search.dart&#39;; import &#39;package:good_choice/settings/settings.dart&#39;; import &#39;package:shared_preferences/shared_preferences.dart&#39;; bool get iOS =&gt; foundation.defaultTargetPlatform == foundation.TargetPlatform.iOS; void main() =&gt; runApp(App()); class App extends StatelessWidget { // This widget is the root of your application.  @override Widget build(BuildContext context) { if (iOS) { // iOS  return CupertinoApp( title: &#39;Good Choice&#39;, theme: CupertinoThemeData( primaryColor: CupertinoColors.destructiveRed, barBackgroundColor: CupertinoColors.extraLightBackgroundGray, ), home: HomePage(title: &#39;Cupertino App&#39;), ); } else { // Android  return MaterialApp( title: &#39;Good Choice&#39;, theme: ThemeData( primaryColor: Colors.
 	</div>
 </article>
 </main>

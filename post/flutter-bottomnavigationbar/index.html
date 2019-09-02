@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta property="og:title" content="Flutter - BottomNavigationBar" />
 <meta property="og:description" content="Flutter
-void main() =&gt; runApp(App()); class HomePage extends StatefulWidget { HomePage({Key key, this.title}) : super(key: key); final String title; @override _HomePageState createState() =&gt; _HomePageState(); } BottomBavigationBar" />
+import &#39;package:flutter/foundation.dart&#39; as foundation; import &#39;package:flutter/cupertino.dart&#39;; import &#39;package:flutter/material.dart&#39;; import &#39;package:good_choice/search.dart&#39;; import &#39;package:good_choice/settings/settings.dart&#39;; import &#39;package:shared_preferences/shared_preferences.dart&#39;; bool get iOS =&gt; foundation.defaultTargetPlatform == foundation.TargetPlatform.iOS; void main() =&gt; runApp(App()); class App extends StatelessWidget { // This widget is the root of your application.  @override Widget build(BuildContext context) { if (iOS) { // iOS  return CupertinoApp( title: &#39;Good Choice&#39;, theme: CupertinoThemeData( primaryColor: CupertinoColors.destructiveRed, barBackgroundColor: CupertinoColors.extraLightBackgroundGray, ), home: HomePage(title: &#39;Cupertino App&#39;), ); } else { // Android  return MaterialApp( title: &#39;Good Choice&#39;, theme: ThemeData( primaryColor: Colors." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://clein8.github.io/post/flutter-bottomnavigationbar/" />
 <meta property="article:published_time" content="2019-09-02T22:45:00&#43;09:00"/>
@@ -59,15 +59,116 @@ if (!doNotTrack) {
 		</header><div class="content post__content clearfix">
 			<p>Flutter</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() <span style="color:#f92672">=&gt;</span> runApp(App());
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:flutter/foundation.dart&#39;</span> <span style="color:#66d9ef">as</span> foundation;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:flutter/cupertino.dart&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:flutter/material.dart&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:good_choice/search.dart&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:good_choice/settings/settings.dart&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:shared_preferences/shared_preferences.dart&#39;</span>;
 
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomePage</span> <span style="color:#66d9ef">extends</span> StatefulWidget {
-  HomePage({Key key, <span style="color:#66d9ef">this</span>.title}) <span style="color:#f92672">:</span> <span style="color:#66d9ef">super</span>(key: key);
+<span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">get</span> iOS <span style="color:#f92672">=&gt;</span> foundation.defaultTargetPlatform <span style="color:#f92672">==</span> foundation.TargetPlatform.iOS;
+
+<span style="color:#66d9ef">void</span> main() <span style="color:#f92672">=&gt;</span> runApp(App());
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">App</span> <span style="color:#66d9ef">extends</span> StatelessWidget {
+  <span style="color:#75715e">// This widget is the root of your application.
+</span><span style="color:#75715e"></span>  <span style="color:#960050;background-color:#1e0010">@</span>override
+  Widget build(BuildContext context) {
+    <span style="color:#66d9ef">if</span> (iOS) { <span style="color:#75715e">// iOS
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">return</span> CupertinoApp(
+        title: <span style="color:#e6db74">&#39;Good Choice&#39;</span>,
+        theme: CupertinoThemeData(
+          primaryColor: CupertinoColors.destructiveRed,
+          barBackgroundColor: CupertinoColors.extraLightBackgroundGray,
+        ),
+        home: HomePage(title: <span style="color:#e6db74">&#39;Cupertino App&#39;</span>),
+      );
+    } <span style="color:#66d9ef">else</span> { <span style="color:#75715e">// Android
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">return</span> MaterialApp(
+        title: <span style="color:#e6db74">&#39;Good Choice&#39;</span>,
+        theme: ThemeData(
+          primaryColor: Colors.indigoAccent,
+        ),
+        home: HomePage(title: <span style="color:#e6db74">&#39;Meterial App&#39;</span>),
+      );
+    }
+  }
+}
+
+S<span style="color:#960050;background-color:#1e0010">@</span>  HomePage({Key key, <span style="color:#66d9ef">this</span>.title}) <span style="color:#f92672">:</span> <span style="color:#66d9ef">super</span>(key: key);
 
   <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">String</span> title;
 
   <span style="color:#960050;background-color:#1e0010">@</span>override
   _HomePageState createState() <span style="color:#f92672">=&gt;</span> _HomePageState();
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">_HomePageState</span> <span style="color:#66d9ef">extends</span> State<span style="color:#f92672">&lt;</span>HomePage<span style="color:#f92672">&gt;</span> {
+
+  <span style="color:#66d9ef">int</span> _currentPage <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+  onTapped(<span style="color:#66d9ef">int</span> index) {
+    setState(() {
+      _currentPage <span style="color:#f92672">=</span> index;
+    });
+  }
+
+  <span style="color:#66d9ef">final</span> List<span style="color:#f92672">&lt;</span>Widget<span style="color:#f92672">&gt;</span> tabs <span style="color:#f92672">=</span> [
+    SearchPage(),
+    SettingsPage(),
+  ];
+
+  <span style="color:#960050;background-color:#1e0010">@</span>override
+  Widget build(BuildContext context) {
+    <span style="color:#66d9ef">if</span> (iOS) { <span style="color:#75715e">// iOS
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">return</span> CupertinoTabScaffold(
+        tabBar: CupertinoTabBar(items: [
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.search), title: Text(<span style="color:#e6db74">&#34;제품 검색&#34;</span>),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.settings), title: Text(<span style="color:#e6db74">&#34;설정&#34;</span>),
+          ),
+        ]),
+        tabBuilder: (context, index) {
+          <span style="color:#66d9ef">switch</span> (index) {
+            <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span>
+              <span style="color:#66d9ef">return</span> SearchPage();
+              <span style="color:#66d9ef">break</span>;
+
+            <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+              <span style="color:#66d9ef">return</span> SettingsPage();
+              <span style="color:#66d9ef">break</span>;
+
+            <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+              <span style="color:#66d9ef">return</span> SearchPage();
+              <span style="color:#66d9ef">break</span>;
+          }
+        },
+      );
+    } <span style="color:#66d9ef">else</span> { <span style="color:#75715e">// Android
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">return</span> Scaffold(
+        body: tabs[_currentPage],
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentPage,
+          onTap: onTapped,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search), title: Text(<span style="color:#e6db74">&#34;제품 검색&#34;</span>),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings), title: Text(<span style="color:#e6db74">&#34;설정&#34;</span>),
+<span style="display:block;width:100%;background-color:#3c3d38">            ),
+</span><span style="display:block;width:100%;background-color:#3c3d38">          ],
+</span>        ),
+      );
+    }
+  }
+}
+
+<span style="color:#66d9ef">void</span> putBoolShared(<span style="color:#66d9ef">String</span> key, <span style="color:#66d9ef">bool</span> value) <span style="color:#66d9ef">async</span> {
+  SharedPreferences prefs <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> SharedPreferences.getInstance();
+  prefs.setBool(key, value);
 }</code></pre></div>
 
 <p>BottomBavigationBar</p>

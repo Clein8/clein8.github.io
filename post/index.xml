@@ -18,7 +18,7 @@
       
       <guid>http://clein8.github.io/post/flutter-bottomnavigationbar/</guid>
       <description>Flutter
-void main() =&amp;gt; runApp(App()); class HomePage extends StatefulWidget { HomePage({Key key, this.title}) : super(key: key); final String title; @override _HomePageState createState() =&amp;gt; _HomePageState(); } BottomBavigationBar</description>
+import &amp;#39;package:flutter/foundation.dart&amp;#39; as foundation; import &amp;#39;package:flutter/cupertino.dart&amp;#39;; import &amp;#39;package:flutter/material.dart&amp;#39;; import &amp;#39;package:good_choice/search.dart&amp;#39;; import &amp;#39;package:good_choice/settings/settings.dart&amp;#39;; import &amp;#39;package:shared_preferences/shared_preferences.dart&amp;#39;; bool get iOS =&amp;gt; foundation.defaultTargetPlatform == foundation.TargetPlatform.iOS; void main() =&amp;gt; runApp(App()); class App extends StatelessWidget { // This widget is the root of your application.  @override Widget build(BuildContext context) { if (iOS) { // iOS  return CupertinoApp( title: &amp;#39;Good Choice&amp;#39;, theme: CupertinoThemeData( primaryColor: CupertinoColors.destructiveRed, barBackgroundColor: CupertinoColors.extraLightBackgroundGray, ), home: HomePage(title: &amp;#39;Cupertino App&amp;#39;), ); } else { // Android  return MaterialApp( title: &amp;#39;Good Choice&amp;#39;, theme: ThemeData( primaryColor: Colors.</description>
     </item>
     
     <item>
