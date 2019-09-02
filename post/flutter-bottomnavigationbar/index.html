@@ -95,7 +95,8 @@ if (!doNotTrack) {
   }
 }
 
-S<span style="color:#960050;background-color:#1e0010">@</span>  HomePage({Key key, <span style="color:#66d9ef">this</span>.title}) <span style="color:#f92672">:</span> <span style="color:#66d9ef">super</span>(key: key);
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomePage</span> <span style="color:#66d9ef">extends</span> StatefulWidget {
+  HomePage({Key key, <span style="color:#66d9ef">this</span>.title}) <span style="color:#f92672">:</span> <span style="color:#66d9ef">super</span>(key: key);
 
   <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">String</span> title;
 
@@ -157,10 +158,10 @@ S<span style="color:#960050;background-color:#1e0010">@</span>  HomePage({Key ke
               icon: Icon(Icons.search), title: Text(<span style="color:#e6db74">&#34;제품 검색&#34;</span>),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.settings), title: Text(<span style="color:#e6db74">&#34;설정&#34;</span>),
-<span style="display:block;width:100%;background-color:#3c3d38">            ),
-</span><span style="display:block;width:100%;background-color:#3c3d38">          ],
-</span>        ),
+<span style="display:block;width:100%;background-color:#3c3d38">              icon: Icon(Icons.settings), title: Text(<span style="color:#e6db74">&#34;설정&#34;</span>),
+</span><span style="display:block;width:100%;background-color:#3c3d38">            ),
+</span>          ],
+        ),
       );
     }
   }
