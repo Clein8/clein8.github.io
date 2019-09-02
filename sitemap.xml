@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://clein8.github.io/post/flutter-bottomnavigationbar/</loc>
+    <lastmod>2019-09-02T22:45:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://clein8.github.io/post/wordpress-custom-post-type/</loc>
     <lastmod>2019-05-28T16:21:00+09:00</lastmod>
   </url>
@@ -24,6 +29,12 @@
   </url>
   
   <url>
+    <loc>http://clein8.github.io/tags/bottomnavigationbar/</loc>
+    <lastmod>2019-09-02T22:45:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://clein8.github.io/categories/</loc>
     <lastmod>2019-05-13T11:07:00+09:00</lastmod>
     <priority>0</priority>
@@ -31,7 +42,7 @@
   
   <url>
     <loc>http://clein8.github.io/</loc>
-    <lastmod>2019-05-28T16:21:00+09:00</lastmod>
+    <lastmod>2019-09-02T22:45:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -42,19 +53,31 @@
   </url>
   
   <url>
+    <loc>http://clein8.github.io/tags/flutter/</loc>
+    <lastmod>2019-09-02T22:45:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://clein8.github.io/categories/flutter/</loc>
+    <lastmod>2019-09-02T22:45:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://clein8.github.io/tags/gatsby/</loc>
     <lastmod>2019-05-13T11:07:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://clein8.github.io/categories/github/</loc>
+    <loc>http://clein8.github.io/tags/github/</loc>
     <lastmod>2019-05-13T13:14:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://clein8.github.io/tags/github/</loc>
+    <loc>http://clein8.github.io/categories/github/</loc>
     <lastmod>2019-05-13T13:14:00+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -66,13 +89,13 @@
   </url>
   
   <url>
-    <loc>http://clein8.github.io/categories/hugo/</loc>
+    <loc>http://clein8.github.io/tags/hugo/</loc>
     <lastmod>2019-05-13T13:14:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://clein8.github.io/tags/hugo/</loc>
+    <loc>http://clein8.github.io/categories/hugo/</loc>
     <lastmod>2019-05-13T13:14:00+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -96,26 +119,26 @@
   </url>
   
   <url>
-    <loc>http://clein8.github.io/categories/plugin/</loc>
-    <lastmod>2019-05-28T16:21:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://clein8.github.io/tags/plugin/</loc>
     <lastmod>2019-05-28T16:21:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://clein8.github.io/post/</loc>
+    <loc>http://clein8.github.io/categories/plugin/</loc>
     <lastmod>2019-05-28T16:21:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://clein8.github.io/post/</loc>
+    <lastmod>2019-09-02T22:45:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://clein8.github.io/tags/</loc>
-    <lastmod>2019-05-13T13:14:00+09:00</lastmod>
+    <lastmod>2019-09-02T22:45:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -126,13 +149,13 @@
   </url>
   
   <url>
-    <loc>http://clein8.github.io/categories/wordpress/</loc>
+    <loc>http://clein8.github.io/tags/wordpress/</loc>
     <lastmod>2019-05-28T16:21:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://clein8.github.io/tags/wordpress/</loc>
+    <loc>http://clein8.github.io/categories/wordpress/</loc>
     <lastmod>2019-05-28T16:21:00+09:00</lastmod>
     <priority>0</priority>
   </url>
