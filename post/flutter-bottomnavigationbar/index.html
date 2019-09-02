@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta property="og:title" content="Flutter - BottomNavigationBar" />
 <meta property="og:description" content="Flutter
-class HomePage extends StatefulWidget { HomePage({Key key, this.title}) : super(key: key); } BottomBavigationBar" />
+void main() =&gt; runApp(App()); class HomePage extends StatefulWidget { HomePage({Key key, this.title}) : super(key: key); final String title; @override _HomePageState createState() =&gt; _HomePageState(); } BottomBavigationBar" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://clein8.github.io/post/flutter-bottomnavigationbar/" />
 <meta property="article:published_time" content="2019-09-02T22:45:00&#43;09:00"/>
@@ -59,8 +59,15 @@ if (!doNotTrack) {
 		</header><div class="content post__content clearfix">
 			<p>Flutter</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomePage</span> <span style="color:#66d9ef">extends</span> StatefulWidget {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">void</span> main() <span style="color:#f92672">=&gt;</span> runApp(App());
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomePage</span> <span style="color:#66d9ef">extends</span> StatefulWidget {
   HomePage({Key key, <span style="color:#66d9ef">this</span>.title}) <span style="color:#f92672">:</span> <span style="color:#66d9ef">super</span>(key: key);
+
+  <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">String</span> title;
+
+  <span style="color:#960050;background-color:#1e0010">@</span>override
+  _HomePageState createState() <span style="color:#f92672">=&gt;</span> _HomePageState();
 }</code></pre></div>
 
 <p>BottomBavigationBar</p>

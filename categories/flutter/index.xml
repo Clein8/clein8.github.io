@@ -18,7 +18,7 @@
       
       <guid>http://clein8.github.io/post/flutter-bottomnavigationbar/</guid>
       <description>Flutter
-class HomePage extends StatefulWidget { HomePage({Key key, this.title}) : super(key: key); } BottomBavigationBar</description>
+void main() =&amp;gt; runApp(App()); class HomePage extends StatefulWidget { HomePage({Key key, this.title}) : super(key: key); final String title; @override _HomePageState createState() =&amp;gt; _HomePageState(); } BottomBavigationBar</description>
     </item>
     
   </channel>
